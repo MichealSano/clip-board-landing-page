@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Clipboard landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.attribution {
+    font-size: 12px;
+    text-align: center;
+    padding-top: 14px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+body {
+    font-size: 18px;
+    line-height: 1.4;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+h1,
+h2,
+h3,
+h4 {
+    color: hsl(210, 10%, 33%);
+}
+p {
+    color: hsl(201, 11%, 66%);
+}
+.main {
+    background-image: url(https://res.cloudinary.com/dowrygm9b/image/upload/v1575323874/clipboard%20landing%20page/bg-header-mobile_c27vvd.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.main-wrap {
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 90px;
+    display: grid;
+    display: -moz-grid;
+    display: -ms-grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    text-align: center;
+    grid-gap: 40px;
+    padding-bottom: 60px;
+}
+.main-buttons {
+    padding-bottom: 30px;
+}
+.main-buttons button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px 77px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 15px
+}
+.main-buttons button:first-child {
+    background-color: hsl(171, 66%, 44%);
+}
+.main-buttons button:last-child {
+    background-color: hsl(233, 100%, 69%);
+}
+.main-buttons button:first-child:hover{
+  transform: scale(2);
+  transition: all 2s ease-in;
+}
+.main-buttons button:last-child:hover{
+  transform: scale(2);
+  transition: all 2s ease-in;
+}
+.features {
+    padding: 70px 0;
+}
+.features-wrap {
+    margin: 0 auto;
+    width: 80%;
+}
+.features-wrap h2,
+p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.feature-flex {
+    display: grid;
+    display: -moz-grid;
+    display: -ms-grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    text-align: center;
+    grid-gap: 60px;
+}
+.feature-text {
+    margin-bottom: 30px
+}
+.feature-image img {
+    width: 300px;
+    margin-top: 30px
+}
+.more-features {
+    padding: 50px 0;
+
+}
+.more-features-wrap {
+    margin: 0 auto;
+    width: 80%;
+}
+.more-features h2,
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.more-features-img img {
+    width: 100%;
+    margin: 30px 0;
+}
+.more-features-grid {
+    display: grid;
+    display: -moz-grid;
+    display: -ms-grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    text-align: center;
+    grid-gap: 40px;
+}
+.more-feature img {
+    margin-bottom: 20px;
+}
+.users {
+    padding: 70px 0;
+}
+.users-wrap {
+    display: grid;
+    display: -moz-grid;
+    display: -ms-grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    grid-gap: 70px;
+}
+.download {
+    padding: 70px 0;
+}
+.download-wrap {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+.download-wrap p {
+    margin: 20px 0;
+}
+.download-buttons button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px 77px;
+    border-radius: 30px;
+    margin-bottom: 12px;
+    color: white;
+    font-size: 15px
+}
+.download-buttons button:first-child {
+    background-color: hsl(171, 66%, 44%);
+}
+.download-buttons button:last-child {
+    background-color: hsl(233, 100%, 69%);
+}
+footer {
+    padding-top: 70px;
+}
+.footer-wrap {
+    display: grid;
+    display: -moz-grid;
+    display: -ms-grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+.footer-logo img {
+    margin-bottom: 20px;
+    height: 70px;
+}
+
+.footer-item:last-child {
+    margin: 20px 0;
+}
+
+.footer-item p {
+    cursor: pointer;
+}
+.footer-item span img {
+    cursor: pointer;
+}
+.footer-item p:hover {
+    color: hsl(171, 66%, 44%);
+}
+.footer-item span img:hover {
+    background-color: hsl(171, 66%, 44%);
+}
+    .features-wrap {
+        margin: 0 auto;
+        width: 60%;
+    }
+    .feature-flex {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 170px;
+        position: relative;
+    }
+    .feature-text {
+        margin-top: 70px
+    }
+    .feature-image img {
+        width: 600px;
+        height: 400px;
+        position: absolute;
+        left: -160px;
+        top: 40px
+    }
+    .more-features-wrap {
+        margin: 0 auto;
+        width: 60%;
+    }
+    .more-features-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 60px;
+    }
+    .more-feature img {
+        margin-bottom: 20px;
+    }
+    .users-wrap {
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 20px;
+    }
+    .download-wrap {
+        width: 60%;
+    }
+    .download-wrap p {
+        margin: 40px 0;
+    }
+    .footer-wrap {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .footer-item:nth-child(4) {
+        margin-top: -60px
+    }
+    .attribution {
+        font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+<section class="main">
+  <div class="main-wrap">
+    <img src="./images/logo.svg">
+    <h1>
+       A history of everything you copy
+    </h1>
+    <p>
+        Clipboard allows you to track and organize everything you 
+  copy. Instantly access your clipboard on all your devices.
+    </p>
+  <div class="main-buttons">
+    <button> Download for iOS </button>
+    <button> Download for Mac</button>
+  </div>
+  </div>
+</section>
+
+<section class="featueres">
+  <div class="features-wrap">
+    <h2>Keep track of your snippets</h2>
+    <p>Clipboard instantly stores any item you copy in the cloud, 
+  meaning you can access your snippets immediately on all your 
+  devices. Our Mac and iOS apps will help you organize everything.</p>
+  <div class="feature-flex">
+    <div class="feature-image">
+      <img src="./images/image-computer.png">
+    </div>
+    <div class="feature-texts">
+      <div class="feature-text">
+        <h2> Quick Search</h2>
+        <p> Easily search your snippets by content,
+           category, web address, application, and more.
+</p>
+      </div>
+      <div class="feature-text">
+        <h2>  iCloud Sync</h2>
+        <p>Instantly saves and syncs snippets across all your devices.</p>
+      </div>
+      <div class="feature-text">
+        <h2>Complete History</h2>
+        <p>Retrieve any snippets from the first moment you started using the app.</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="more-features">
+  <div class="more-features-wrap">
+    <h2> Access Clipboard anywhere</h2>
+    <p>Whether you’re on the go, or at your computer, 
+      you can access all your Clipboard 
+  snippets in a few simple clicks.</p>
+  <div class="more-features-image">
+    <img src="./images/image-devices.png">
+  </div>
+  <h2>
+  Supercharge your workflow
+</h2>
+<p style="margin-bottom: 40px;">We’ve got the tools to boost your productivity.</p>
+  </div>
+  <div class="more-features-grid">
+    <div class="more-feature">
+      <img src="./images/icon-blacklist.svg">
+      <h2>Create blacklists</h2>
+      <p>Ensure sensitive information never makes its way to your <br>clipboard by excluding certain sources.</p>
+    </div>
+    <div class="more-feature">
+      <img src="./images/icon-text.svg">
+      <h2>Plain text snippets</h2>
+      <p>Remove unwanted formatting from copied text for a consistent look.
+</p>
+    </div>
+    <div class="more-features">
+      <img src="./images/icon-preview.svg">
+      <h2> Sneak preview</h2>
+      <p> Quick preview of all snippets on your Clipboard for easy access.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="users">
+  <div class="users-wrap">
+  <img src="./images/logo-google.png">
+  <img src="./images/logo-ibm.png">
+  <img src="./images/logo-microsoft.png">
+  <img src="./images/logo-vector-graphics.png">
+  </div>
+</section>
+
+<section class="download">
+  <div class="download-wrap">
+    <h2>Clipboard for iOS and Mac OS</h2>
+    <p>Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
+  and you’re ready to start adding to your clipbo</p>
+  <div class="download-buttons">
+    <button>  Download for iOS</button>
+    <button>  Download for Mac</button>
+  </div>
+  </div>
+</section>
+ 
+<div class="footer-wrap">
+  <div class="footer-logo">
+    <img src="./images/logo.svg">
+  </div>
+  <div class="footer-item">
+    <p>FAQs</p>
+    <p> Contact Us</p>
+    </div>
+    <div class="footer-item">
+      <p>Privacy Policy</p>
+      <p> Press Kit</p>
+</div>
+<div class="footer-item">
+  <p>Install Guide</p>
+</div>
+<div class="footer-item"><span>
+  <img src="./images/icon-facebook.svg"></span>
+  <span><img src="./images/icon-twitter.svg"></span>
+  <span><img src="./images/icon-instagram.svg"></span>
+  </div>
+</div>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Micheal Samson</a>.
+    </p>
+  </footer>
+</body>
+</html>
